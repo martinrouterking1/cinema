@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menù Bevande - CineMusa</title>
+    <style>
+        /* Stili Generali - Ispirati al logo */
+        body {
+            background-color: #050a12; /* Blu quasi nero del logo */
+            color: #ffffff;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .menu-card {
+            background: linear-gradient(145deg, #102a4d, #07162b);
+            border: 4px solid #ffffff;
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+            position: relative;
+        }
+
+        /* Effetto pellicola ai bordi */
+        .menu-card::before, .menu-card::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background-image: radial-gradient(circle, #050a12 50%, transparent 50%);
+            background-size: 30px 30px;
+            background-repeat: repeat-x;
+        }
+        .menu-card::before { top: 10px; }
+        .menu-card::after { bottom: 10px; }
+
+        .logo {
+            width: 180px;
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #3c5a8a;
+            padding-bottom: 10px;
+        }
+
+        .menu-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+
+        .menu-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .item-name {
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        .item-price {
+            font-size: 1.4em;
+            color: #f3ce5e; /* Giallo ispirato ai popcorn */
+            font-weight: 900;
+            background: rgba(0,0,0,0.3);
+            padding: 5px 15px;
+            border-radius: 50px;
+            border: 1px solid #f3ce5e;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-style: italic;
+            color: #8aaccf;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-card">
+        <img src="Logo_CineMusa.png" alt="CineMusa Logo" class="logo">
+        
+        <h1>Menù Bevande</h1>
+
+        <ul class="menu-list">
+            <li class="menu-item">
+                <span class="item-name">Acqua</span>
+                <span class="item-price">2 bacini</span>
+            </li>
+            <li class="menu-item">
+                <span class="item-name">Succo alla pera</span>
+                <span class="item-price">5 bacini</span>
+            </li>
+            <li class="menu-item">
+                <span class="item-name">CocaCola</span>
+                <span class="item-price">10 bacini</span>
+            </li>
+        </ul>
+
+        <footer>
+            Goditi la visione al CineMusa!
+        </footer>
+    </div>
+
+</body>
+</html>
